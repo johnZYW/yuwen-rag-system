@@ -1,36 +1,56 @@
 # Yuwen RAG System
 
-A cleaned public prototype of my retrieval-augmented generation workflow. The project demonstrates document decomposition, embedding-based retrieval, semantic search, and query-to-response generation.
+Cleaned public prototype of a retrieval-augmented generation workflow prepared for portfolio and ByteDance AI Full-Stack Challenge review.
+
+This repository demonstrates the core RAG pipeline without exposing private source documents, generated embedding caches, API keys, logs, or internal working files.
 
 ## What this repository demonstrates
 
 - Document / article decomposition into retrievable units
-- Query embedding and semantic similarity search
-- Article and paragraph ranking
-- Retrieval-augmented answer generation
-- Evaluation utilities for retrieval quality exploration
+- Query representation and semantic-style retrieval
+- Context assembly from top-ranked passages
+- Answer generation from retrieved evidence
+- A public, synthetic sample corpus for safe demonstration
 
-## Public-data note
+## Why this matters
 
-The original working article folders, embedding caches, logs, and internal/raw datasets were removed before publication. This public repository contains code plus a small synthetic sample dataset so the structure is visible without exposing private or potentially non-public materials.
+This project was an early technical foundation for my later Jarvis personal AI assistant work. It helped me understand how long documents can be decomposed, indexed, retrieved, and reassembled into useful context for LLM-based applications.
 
-## Local setup
+## Repository layout
+
+```text
+README.md
+rag_demo.py
+requirements.txt
+sample_data/
+  combined_articles.json
+.env.example
+.gitignore
+SECURITY.md
+```
+
+## Quick start
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install openai numpy scikit-learn pandas openpyxl
-export OPENAI_API_KEY="your_key_here"
+pip install -r requirements.txt
+python rag_demo.py "How does Jarvis use confirmation before changing user data?"
 ```
 
-## Example
+The public demo uses a lightweight TF-IDF retriever so it can run without external API keys. The original private working version also explored LLM/embedding-based retrieval and answer generation.
 
-```bash
-python query_to_response.py
-```
+## Public-data note
 
-You may replace `sample_data/combined_articles.json` with your own public corpus.
+The original working article folders, embedding caches, logs, spreadsheets, raw datasets, and internal/private materials were removed before publication. This repository contains only code and synthetic sample data.
 
 ## Repository cleaning
 
-Before publication, API keys, `API_key/`, generated embedding caches, article logs, raw article folders, spreadsheets, macOS metadata, and potentially sensitive working documents were removed.
+Before publication, the following were removed:
+
+- API keys and credential folders
+- Generated embedding caches
+- Article processing logs
+- Raw article folders and internal datasets
+- Spreadsheets and private working documents
+- macOS metadata and generated caches
