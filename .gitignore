@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+
+# macOS / editor
+.DS_Store
+__MACOSX/
+.vscode/
+.idea/
+
+# secrets / credentials
+.env
+.env.*
+!.env.example
+keys/
+API_key/
+*api*key*.txt
+*secret*.txt
+*credential*.json
+*service-account*.json
+
+# generated / personal data
+*.db
+*.sqlite
+*.sqlite3
+*.wav
+*.mp3
+*.m4a
+*.log
+cache/
+outputs/
+artifacts/
+relevance_dataset_with_embeddings.json
+structured_dataset_with_embeddings.json
