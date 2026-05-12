@@ -1,0 +1,17 @@
+[
+  {
+    "id": "jarvis-confirmation-safety",
+    "title": "Jarvis confirmation-first action safety",
+    "text": "Jarvis converts natural-language requests into structured action frames. Operations that mutate user data, such as calendar edits, itinerary saves, compound schedule drafts, and cost creation, are confirmation-gated before execution."
+  },
+  {
+    "id": "rag-foundation",
+    "title": "RAG workflow foundation",
+    "text": "The RAG prototype decomposes documents into retrievable units, matches user queries against relevant passages, assembles context, and generates an evidence-grounded answer from the retrieved information."
+  },
+  {
+    "id": "ai-fullstack-super-individual",
+    "title": "AI full-stack super individual",
+    "text": "The project narrative demonstrates how one developer can use AI coding tools to move from requirements, architecture, backend, frontend, testing, documentation, and demo delivery to an end-to-end application package."
+  }
+]
